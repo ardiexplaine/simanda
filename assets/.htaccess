@@ -1,0 +1,24 @@
+RewriteEngine on
+Options All -Indexes
+
+Order Allow,Deny
+
+Deny from all
+
+<Files ~ "\.(jpe?g|png|gif|css|xlsx|pdf|js)$">
+
+Allow from all
+
+</Files>
+
+<IfModule mod_php4.c>
+
+php_value engine off
+
+</IfModule>
+
+<IfModule mod_php5.c>
+
+php_value engine off
+
+</IfModule>
